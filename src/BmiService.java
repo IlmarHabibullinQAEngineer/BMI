@@ -1,9 +1,12 @@
 public class BmiService {
-    public int calculate(int a, float b) {   //76 170
+    public int calculate(int weight, float growth) {   //76 170
 
-       float c = b / 100;
-       float f = c * c;
-       float cost = a / f;
-       return (int) cost;
+        //growthpath- часть роста
+        //growthmultiplication- умноженный рост
+
+        float growthpath = growth / 100;
+        float growthmultiplication = growthpath * growthpath;
+        float cost = weight / growthmultiplication;
+        return (int) cost;
     }
 }
